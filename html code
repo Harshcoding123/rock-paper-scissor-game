@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>rockPaperScissorGame</title>
+       <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="head">Rock Paper Scissor</h1>
+        <div class="imagecollect">
+            <img id="img1" class="image" src="https://github.com/shradha-khapra/JavaScriptSeries/blob/main/StonePaperScissors/images/rock.png?raw=true">
+            <img id="img2" class="image" src="https://github.com/shradha-khapra/JavaScriptSeries/blob/main/StonePaperScissors/images/paper.png?raw=true">
+            <img id="img3" class="image" src="https://github.com/shradha-khapra/JavaScriptSeries/blob/main/StonePaperScissors/images/scissors.png?raw=true">
+        </div> 
+        <div class="score">
+        <div id="player">
+            <div id="pscore" >0</div>
+            <div>You</div>
+        </div>
+        <div id="computer">
+            <div id="cscore" >0</div>
+            <div>Comp</div>
+        </div>
+        </div>
+        <div id="presult">
+        <div id="result"><h2>Play</h2></div>
+        </div>
+
+        <script src="first.js"></script>
+    </body>
+</html>
