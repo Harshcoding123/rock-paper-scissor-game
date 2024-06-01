@@ -1,0 +1,101 @@
+let img1= document.querySelector("#img1");
+let img2= document.querySelector("#img2");
+let img3= document.querySelector("#img3");
+
+function compplay(){
+    let numc= Math.floor(Math.random()*3);
+// console.log(numc);
+arr= ["rock","paper","scissor"];
+return arr[numc];
+}
+let pscore =document.querySelector("#pscore");
+let cscore =document.querySelector("#cscore");
+let result =document.querySelector("#result");
+let scorec=0;
+let scorep= 0;
+
+
+
+    img1.addEventListener("click",()=>{
+        nump= "rock";
+        let numc =compplay();
+        console.log("player -",nump);
+        console.log("comp -",numc);
+        if(nump==numc){
+            console.log("it's a draw");
+            result.innerHTML ="<h2>It's a Draw</h2>";
+            result.style.backgroundColor = "#081b31";
+        }else if(numc=="scissor"){
+            console.log("player win");
+            result.innerHTML= `<h2> You Win! ${nump}  beats ${numc}</h2>`;
+            result.
+            scorep++;
+            pscore.innerText= scorep;
+            result.style.backgroundColor = "green";
+
+
+        }else{
+            console.log("computer win");
+            result.innerHTML=  `<h2> You Lose! ${numc}  beats Your ${nump}</h2>`;
+            result.style.backgroundColor = "red";
+            scorec++;
+            cscore.innerText =scorec;
+        }
+
+
+    });
+    img2.addEventListener("click",()=>{
+        nump= "paper";
+        
+        let numc =compplay();
+        console.log("player -",nump);
+        console.log("comp -",numc);
+        if(nump==numc){
+            console.log("It's a draw");
+            result.innerHTML= "<h2> It's a Draw</h2>"
+            result.style.backgroundColor = "#081b31";
+        }else if(numc=="scissor"){
+            console.log("computer win");
+            result.innerHTML=   `<h2> You Lose! ${numc}  beats Your ${nump}</h2>`;
+            result.style.backgroundColor = "red";
+            scorec++;
+            
+            cscore.innerText =scorec;
+
+        }else{
+            console.log("player win");
+            result.innerHTML=  `<h2> You Win! ${nump}  beats ${numc}</h2>`;
+            result.style.backgroundColor = "green";
+            scorep++;
+            pscore.innerText =scorecp;
+        }
+    });
+    img3.addEventListener("click",()=>{
+        nump="scissor";
+        
+        let numc =compplay();
+        console.log("player -",nump);
+        console.log("comp -",numc);
+        if(nump==numc){
+            console.log("it's a draw");
+            result.innerHTML= "<h2> It's a Draw</h2>"
+            result.style.backgroundColor = "#081b31";
+        }else if(numc=="rock"){
+            console.log("computer win");
+            result.innerHTML=   `<h2> You Lose! ${numc}  beats Your ${nump}</h2>`;
+            result.style.backgroundColor = "red";
+            scorec++;
+            cscore.innerText =scorec;
+        }else{
+            console.log("player win");
+            result.innerHTML= `<h2> You Win! ${nump}  beats ${numc}</h2>`;
+            result.style.backgroundColor = "green";
+            scorep++;
+            pscore.innerText =scorep;
+        }
+    });
+
+
+    
+
+
